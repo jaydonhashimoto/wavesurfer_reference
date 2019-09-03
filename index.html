@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/wavesurfer.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Wavesurfer Demo</title>
+  </head>
+  <body>
+    <button id="playAll">Play All</button>
+    <button id="pauseAll">Pause All</button>
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="0"
+        max="50"
+        value="25"
+        class="slider"
+        id="myRange"
+      />
+      <p>Volume: <span id="demo"></span></p>
+    </div>
+    <hr />
+    <div id="waveform"></div>
+    <button id="playBtn">Play</button>
+    <button id="pauseBtn">Pause</button>
+    <div id="waveform2"></div>
+    <button id="playBtn2">Play</button>
+    <button id="pauseBtn2">Pause</button>
+    <script src="index.js"></script>
+  </body>
+</html>
