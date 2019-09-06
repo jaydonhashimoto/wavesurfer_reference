@@ -13,20 +13,21 @@ const wavesurfer2 = WaveSurfer.create({
 });
 
 document.getElementById('playBtn').addEventListener('click', play);
-document.getElementById('pauseBtn').addEventListener('click', pause);
+document.getElementById('pauseBtn').addEventListener('click', pause1);
 
 document.getElementById('playBtn2').addEventListener('click', play2);
 document.getElementById('pauseBtn2').addEventListener('click', pause2);
 
-document.getElementById('playAll').addEventListener('click', play);
-document.getElementById('playAll').addEventListener('click', play2);
+document.getElementById('playAll').addEventListener('click', playAll);
+// document.getElementById('playAll').addEventListener('click', play2);
 document.getElementById('pauseAll').addEventListener('click', pauseAll);
+// document.getElementById('pauseAll').addEventListener('click', pause2);
 
 function play() {
   wavesurfer.play();
 }
 
-function pause() {
+function pause1() {
   wavesurfer.pause();
 }
 
@@ -39,13 +40,21 @@ function pause2() {
 }
 
 function playAll() {
-  wavesurfer.play();
-  wavesurfer2.play();
+  if (document.getElementById('track1').checked) {
+    wavesurfer.play();
+  }
+  if (document.getElementById('track2').checked) {
+    wavesurfer2.play();
+  }
 }
 
 function pauseAll() {
-  wavesurfer.pause();
-  wavesurfer2.pause();
+  if (document.getElementById('track1').checked) {
+    wavesurfer.pause();
+  }
+  if (document.getElementById('track2').checked) {
+    wavesurfer2.pause();
+  }
 }
 
 wavesurfer.setVolume(0.25);
